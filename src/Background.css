@@ -1,5 +1,9 @@
 
-img {
-    width: 1000px;
-    height: 700px;
+#img {
+    height: 1500px;
+    width: 2000px;
+    background-image: url(stroubles_creek.jpg);
+    background-size: cover;
+    /*background-position: center;
+    background-repeat: no-repeat;*/
 }

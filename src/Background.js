@@ -8,7 +8,7 @@
 
 import './Background.css';
 import React from "react";
-import photo from './Daisy-photo.jpg'
+import photo from './stroubles_creek.jpg'
 
 class Background extends React.Component {
 
@@ -18,7 +18,8 @@ class Background extends React.Component {
      */
     render() {
         return(
-            <img src={photo} />
+            /**<img src={photo} />*/
+            <div id={"img"}>  </div>
         );
     }
 }
