@@ -19,7 +19,9 @@ class Background extends React.Component {
     render() {
         return(
             /**<img src={photo} />*/
-            <div id={"img"}>  </div>
+            <div id="background">
+                <img src={photo} className={"image"}/>
+            </div>
         );
     }
 }
