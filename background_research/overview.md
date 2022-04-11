@@ -11,6 +11,10 @@ Our idea for the 8 different pages is to have 8 seperate locations. These locati
 3. Water runoff
     1. Bridge 1
     2. Town Spring (or any spring, not too sure on this location)
-4. NOT SURE
-    1. NOT SURE
-    2. NOT SURE
+        Option: Owens Street Spring- stormwater detention pond
+4. Bioretention
+    1. Smithfield Lot Bioretention Pretreatment/ Smithfield Lot Bioretention
+    2. West End Bioretnetion
+5. Other places to maybe include instead of biorentention
+    1. ICTAS II Rain Garden 
+    2. Roller Hockey Rink Water Quality Unit 
