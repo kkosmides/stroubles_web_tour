@@ -3,14 +3,14 @@ Our idea for the 8 different pages is to have 8 seperate locations. These locati
 
 ## Groups:
 1. Wildlife
-    a. Beaver Damn
-    b. Duckpond
+    1. Beaver Damn
+    2. Duckpond
 2. History
-    a. War Memorial Hall / Drillfield
-    b. Blacksburg Mill
+    1. War Memorial Hall / Drillfield
+    2. Blacksburg Mill
 3. Water runoff
-    a. Bridge 1
-    b. Town Spring (or any spring, not too sure on this location)
+    1. Bridge 1
+    2. Town Spring (or any spring, not too sure on this location)
 4. NOT SURE
-    a. NOT SURE
-    b. NOT SURE
+    1. NOT SURE
+    2. NOT SURE
