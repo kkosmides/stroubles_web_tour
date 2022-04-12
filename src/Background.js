@@ -17,13 +17,18 @@ class Background extends React.Component {
      * @returns {JSX.Element}   The rendered header.
      */
     render() {
+
+        let w = this.props.window_width;
+        let h = this.props.window_height;
+
         return(
-            /**<img src={photo} />*/
             <div id="background">
-                <img src={photo} className={"image"}/>
+                <button type="button" class="forward_b" onClick={this.props.forward} >This is forward button</button>
+                <button type="button" class="back_b" onClick={this.props.back}>This is back button</button>
             </div>
         );
     }
+
 }
 
 export default Background;

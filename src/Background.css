@@ -1,15 +1,36 @@
 
 #background {
-
+    background-image: url("stroubles_creek.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
     width: 100%;
     height: 100%;
     position: fixed;
     left: 0px;
     top: 0px;
-
 }
 
-.image {
-    width: 100%;
-    height: 100%;
+
+.forward_b {
+    position: absolute;
+    left: 100px;
+    top: 100px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.back_b {
+    position: absolute;
+    left: 10px;
+    top: 100px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
 }
