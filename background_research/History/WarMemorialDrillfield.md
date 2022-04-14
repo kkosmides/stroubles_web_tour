@@ -9,12 +9,12 @@
 - Lets also use a current photo?
 
 ## Some facts about the area
-- Stream was burried in about 1937
+- Stream was buried in about 1937
 - This highlights the idea of how the creek is mostly underground
 - Coincides with the idea of "out of sight, out of mind"
 
 - Enclosed in a three-sided culvert
-- Eight feet hight and four and a half feet wide
+- Eight feet height and four and a half feet wide
 
 - Responsible for most of the flooding on the drill field
 
