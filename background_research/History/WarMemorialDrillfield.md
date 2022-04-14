@@ -4,6 +4,11 @@
 
 ![image](https://user-images.githubusercontent.com/92938154/161821595-5dd6dca8-f810-4a89-b58b-391d9245eeab.png)
 
+![image](https://user-images.githubusercontent.com/92938154/163420148-68c8a68c-7828-40c2-9b8f-13f44df9699f.png)
+
+- Lets also use a current photo?
+
+## Some facts about the area
 - Stream was burried in about 1937
 - This highlights the idea of how the creek is mostly underground
 - Coincides with the idea of "out of sight, out of mind"
