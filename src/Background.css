@@ -20,8 +20,8 @@
 
 .forward_b {
     position: absolute;
-    left: 92%;
-    top: 45%;
+    left: 92vw;
+    top: 50vh;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -32,8 +32,8 @@
 
 .back_b {
     position: absolute;
-    left: 0%;
-    top: 45%;
+    left: 2vw;
+    top: 50vh;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -44,5 +44,6 @@
 
 .exit {
     position: absolute;
-    left: 96%;
+    left: 95vw;
+    top: 2vh;
 }

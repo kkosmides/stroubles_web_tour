@@ -8,10 +8,12 @@
 
 #infoTemplate {
     position: fixed;
-    left: 50%;
-    top: 50%;
-    height: 200px;
-    width: 250px;
+    top: 10vh;
+    left: 25vw;
+    height: 75vh;
+    width: 55vw;
+    justify-content: center;
+    align-items: center;
     background-color: white;
     padding: 8px;
     border-style: groove;
@@ -19,6 +21,18 @@
 }
 
 #infoImg {
-    width: 100px;
-    height: 100px;
+    width: 55vw;
+    height: 60vh;
+}
+
+.moreInfo {
+    position: absolute;
+    left: 23vw;
+    top: 70vh;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
 }
