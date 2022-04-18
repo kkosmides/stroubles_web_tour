@@ -17,3 +17,8 @@
     border-style: groove;
     border-color: darkgray;
 }
+
+#infoImg {
+    width: 100px;
+    height: 100px;
+}
