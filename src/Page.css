@@ -1,0 +1,19 @@
+/*
+ * Stroubles Creek Web Tour
+ * Page component CSS source code
+ *
+ * Author: Katrina Kosmides
+ * Version: 1.0
+ */
+
+#infoTemplate {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    height: 200px;
+    width: 250px;
+    background-color: white;
+    padding: 8px;
+    border-style: groove;
+    border-color: darkgray;
+}
