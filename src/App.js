@@ -18,10 +18,11 @@ class App extends React.Component {
      */
     constructor(props) {
         super(props);
-        this.state = {window_width: window.innerWidth, window_height: window.innerHeight, showPage: false, pageNum: 0};
+        this.state = {window_width: window.innerWidth, window_height: window.innerHeight, showPage: false, pageNum: 0, moreInfo: false};
         this.forward = this.forward.bind(this);
         this.back = this.back.bind(this);
         this.exit = this.exit.bind(this);
+        this.handleMoreInfo = this.handleMoreInfo.bind(this);
     }
 
     /*
@@ -34,7 +35,7 @@ class App extends React.Component {
             <div className="App">
                 <Background window_width={this.state.window_width} window_height={this.state.window_height}
                     forward={this.forward} back={this.back} exit={this.exit}/>
-                {showPage && <Page pageNum={this.state.pageNum} />}
+                {showPage && <Page pageNum={this.state.pageNum} moreInfo={this.state.moreInfo} handleMoreInfo={this.handleMoreInfo}/>}
             </div>
         );
     }
@@ -46,11 +47,13 @@ class App extends React.Component {
     forward(e) {
         // Increments pageNum
         if (this.state.pageNum >= 0 && this.state.pageNum < 9) {
-            this.setState({ pageNum: this.state.pageNum + 1})
+            this.setState({ pageNum: this.state.pageNum + 1});
+            this.setState({moreInfo: false});
         }
         // Determines if the page component should be shown or hidden
         if (this.state.pageNum == 0) {
             this.setState({ showPage: !this.state.showPage})
+            this.setState({moreInfo: false});
         }
     }
 
@@ -62,10 +65,12 @@ class App extends React.Component {
         // Decrements pageNum
         if (this.state.pageNum > 0 && this.state.pageNum <= 9) {
             this.setState({ pageNum: this.state.pageNum - 1})
+            this.setState({moreInfo: false});
         }
         // Determines if the page component should be shown or hidden
         if (this.state.pageNum == 1) {
             this.setState({ showPage: !this.state.showPage})
+            this.setState({moreInfo: false});
         }
     }
 
@@ -78,6 +83,10 @@ class App extends React.Component {
             this.setState({showPage: !this.state.showPage})
             this.setState({pageNum: 0})
         }
+    }
+
+    handleMoreInfo(e) {
+        this.setState({moreInfo: !this.state.moreInfo});
     }
 }
 
