@@ -33,34 +33,47 @@ class Page extends React.Component {
          // Determines which page the user is on, then sets text accordingly
          if (p == 1) {
              if (moreInfo) {
-                 text = <p>Some links here.</p>
+                 text = <p>https://reports.aashe.org/institutions/virginia-tech-va/report/2013-03-19/OP/water/OP-23/</p>
                  btn = <button type="button" className="exitMoreInfo" onClick={this.props.handleMoreInfo}>Back</button>
              }
              else {
-                 text = <p>This is page 1.</p>
+                 text = <p>The Smithfield Lot has three parts to it. 
+                     The first is the Smithfield lot Bioretention Pretreatment. This is upstream of the bioretention and uses a natural filter
+                     to keep out solid debris. The water is distributed evenely into the bioretention pond. The next part is the biorention pond.
+                     Using filtration media, the Smithfield Biorention pond filters the water to remove sediment and pollutants before its flows 
+                     back into the storm water system. The final part to the Smithfield lot is the extended detention. The extended detetion 
+                     gradually release water to increase settling polluntants and protect downstream channels. </p>
                  imgSrc = img1;
                  btn = <button type="button" className="moreInfo" onClick={this.props.handleMoreInfo}>More Information</button>
              }
          }
          else if (p == 2) {
              if (moreInfo) {
-                 text = <p>Some links here.</p>
+                 text = <p>https://www.facilities.vt.edu/content/dam/facilities_vt_edu/stormwater/Virginia%20Tech%202020%20MS4%20Annual%20Report.pdf</p>
                  btn = <button type="button" className="exitMoreInfo" onClick={this.props.handleMoreInfo}>Back</button>
              }
              else {
-                 text = <p>This is page 2.</p>
+                 text = <p>The Grove Lane Detention pond was constructed in the late 90s but underwent renovations. 
+                     They replaced low flow outlet structure to handle runoff and volume better. The low flow channel directs water to the outlet,
+                     while the inflow channel collects parking lot runoff into the pond. The renovations helped the pond look better instead 
+                     of a muddy mess filled with sediment and debris. 
+                 </p>
                  imgSrc = img1;
                  btn = <button type="button" className="moreInfo" onClick={this.props.handleMoreInfo}>More Information</button>
              }
          }
          else if (p == 3) {
              if (moreInfo) {
-                 text = <p>Some links here.</p>
+                 text = <p>https://www.nps.gov/tps/sustainability/new-technology/green-roofs/define.html
+                     https://vtx.vt.edu/articles/2012/07/070312-caus-greenroof.html
+                 </p>
                  btn = <button type="button" className="exitMoreInfo" onClick={this.props.handleMoreInfo}>Back</button>
 
              }
              else {
-                 text = <p>This is page 3.</p>
+                 text = <p>The Life Sciences Green Roof has a planted layers of vegetation to reduce urban stormwater runoff. 
+                     This environmental design is to support healthy equilibrium between manmade and natural storm drainage systems.
+                 </p>
                  imgSrc = img1;
                  btn = <button type="button" className="moreInfo" onClick={this.props.handleMoreInfo}>More Information</button>
 
@@ -68,12 +81,17 @@ class Page extends React.Component {
          }
          else if (p == 4) {
              if (moreInfo) {
-                 text = <p>Some links here.</p>
+                 text = <p>https://www.epa.gov/soakuptherain/soak-rain-rain-gardens
+                     https://resilientvirginia.org/vsbn_archives/20071026_016_Va_Tech.pdf
+                     https://www.facilities.vt.edu/content/dam/facilities_vt_edu/stormwater/Virginia%20Tech%202020%20MS4%20Annual%20Report.pdf
+                 </p>
                  btn = <button type="button" className="exitMoreInfo" onClick={this.props.handleMoreInfo}>Back</button>
 
              }
              else {
-                 text = <p>This is page 4.</p>
+                 text = <p>The ICTAS II Rain Garden is a depressed area that collects rain and allows it to soak into the ground. 
+                     The purpose of this is to reduce runoff from the property and filter out pollutants.
+                 </p>
                  imgSrc = img1;
                  btn = <button type="button" className="moreInfo" onClick={this.props.handleMoreInfo}>More Information</button>
 
