@@ -10,7 +10,7 @@
     position: fixed;
     top: 10vh;
     left: 25vw;
-    height: 75vh;
+    height: 80vh;
     width: 55vw;
     justify-content: center;
     align-items: center;
@@ -28,7 +28,7 @@
 .moreInfo {
     position: absolute;
     left: 23vw;
-    top: 70vh;
+    top: 77vh;
     text-align: center;
     text-decoration: none;
     display: inline-block;

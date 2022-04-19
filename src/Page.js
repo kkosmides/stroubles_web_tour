@@ -9,6 +9,7 @@
 import './Page.css';
 import React from "react";
 import img1 from "./stroubles_creek.jpg";
+import img2 from "./Daisy_beach.JPG";
 
 class Page extends React.Component {
 
@@ -20,9 +21,11 @@ class Page extends React.Component {
 
          // Page number and text to show for that page number
          let p = this.props.pageNum;
+         let n = this.props.picNum;
          let moreInfo = this.props.moreInfo;
          let text;
          let imgSrc;
+         let imgSrc1;
          let imgSrc2;
          let imgSrc3;
          let imgSrc4;
@@ -43,8 +46,20 @@ class Page extends React.Component {
                      Using filtration media, the Smithfield Biorention pond filters the water to remove sediment and pollutants before its flows 
                      back into the storm water system. The final part to the Smithfield lot is the extended detention. The extended detetion 
                      gradually release water to increase settling polluntants and protect downstream channels. </p>
-                 imgSrc = img1;
+                 imgSrc1 = img1;
+                 imgSrc2 = img2;
                  btn = <button type="button" className="moreInfo" onClick={this.props.handleMoreInfo}>More Information</button>
+                 if (imgSrc1 != null) {
+                     imgBBtn = <button type="button" className="imgFBtn">Previous Image</button>
+                     imgFBtn = <button type="button" className="imgFBtn">Next Image</button>
+
+                 }
+                 if (n == 1) {
+                     imgSrc = imgSrc1;
+                 }
+                 else if (n == 2) {
+                     imgSrc = imgSrc2;
+                 }
              }
          }
          else if (p == 2) {
@@ -60,6 +75,10 @@ class Page extends React.Component {
                  </p>
                  imgSrc = img1;
                  btn = <button type="button" className="moreInfo" onClick={this.props.handleMoreInfo}>More Information</button>
+                 if (imgSrc2 != null) {
+                     imgFBtn = <button type="button" className="imgFBtn">Next Image</button>
+                     imgBBtn = <button type="button" className="imgFBtn">Previous Image</button>
+                 }
              }
          }
          else if (p == 3) {
@@ -168,6 +187,8 @@ class Page extends React.Component {
              return (
                  <div id="infoTemplate">
                      <img id="infoImg" src={imgSrc}/>
+                     {imgFBtn}
+                     {imgBBtn}
                      {text}
                      {btn}
                  </div>
