@@ -22,7 +22,13 @@
 
 #infoImg {
     width: 55vw;
-    height: 60vh;
+    height: 55vh;
+}
+
+p {
+    position: absolute;
+    top: 60vh;
+    padding-right: 10px;
 }
 
 .moreInfo {
@@ -35,4 +41,16 @@
     font-size: 16px;
     margin: 4px 2px;
     cursor: pointer;
+}
+
+.imgBBtn {
+    position: absolute;
+    left: 2vh;
+    top: 57vh;
+}
+
+.imgFBtn {
+    position: absolute;
+    left: 70vh;
+    top: 57vh;
 }

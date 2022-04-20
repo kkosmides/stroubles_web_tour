@@ -20,14 +20,17 @@
 
 .forward_b {
     position: absolute;
-    left: 92vw;
+    left: 90vw;
     top: 50vh;
     text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
+    background-color: darkblue;
+    color: white;
+    border-radius: 12px;
+    font-size: 20px;
+    padding: 5px 10px;
     cursor: pointer;
+
+    z-index: 1;
 }
 
 .back_b {
@@ -35,15 +38,23 @@
     left: 2vw;
     top: 50vh;
     text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
+    background-color: darkblue;
+    color: white;
+    border-radius: 12px;
+    font-size: 20px;
+    padding: 5px 10px;
     cursor: pointer;
+    z-index: 1;
 }
 
 .exit {
     position: absolute;
-    left: 95vw;
+    left: 94vw;
     top: 2vh;
+    text-align: center;
+    background-color: darkblue;
+    color: white;
+    border-radius: 12px;
+    font-size: 20px;
+    z-index: 1;
 }

@@ -19,14 +19,40 @@ class Background extends React.Component {
      */
      render() {
 
+         let pageNum = this.props.pageNum;
+
          // Returns buttons
-         return(
-             <div id="background">
-                 <button type="button" class="forward_b" onClick={this.props.forward} >Forward</button>
-                 <button type="button" class="back_b" onClick={this.props.back}>Back</button>
-                 <button type="button" class="exit" onClick={this.props.exit}>Exit</button>
-             </div>
-         );
+         if (pageNum == 0) {
+             return(
+                 <div id="buttons">
+                     <div id="background">
+                     </div>
+                     <button type="button" className="forward_b" onClick={this.props.forward}>Forward</button>
+                 </div>
+             );
+         }
+         else if (pageNum < 8) {
+             return(
+                 <div id="buttons">
+                     <div id="background">
+                     </div>
+                     <button type="button" className="forward_b" onClick={this.props.forward}>Forward</button>
+                     <button type="button" className="back_b" onClick={this.props.back}>Back</button>
+                     <button type="button" className="exit" onClick={this.props.exit}>Exit</button>
+                 </div>
+             );
+         }
+         else {
+             return(
+                 <div id="buttons">
+                     <div id="background">
+                     </div>
+                     <button type="button" className="back_b" onClick={this.props.back}>Back</button>
+                     <button type="button" className="exit" onClick={this.props.exit}>Exit</button>
+                 </div>
+             );
+         }
+
     }
 }
 

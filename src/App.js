@@ -36,10 +36,10 @@ class App extends React.Component {
         return (
             <div className="App">
                 <Background window_width={this.state.window_width} window_height={this.state.window_height}
-                            forward={this.forward} back={this.back} exit={this.exit}/>
+                            forward={this.forward} back={this.back} exit={this.exit} pageNum={this.state.pageNum}/>
                 {showPage && <Page pageNum={this.state.pageNum} picNum={this.state.picNum}
                                    moreInfo={this.state.moreInfo} handleMoreInfo={this.handleMoreInfo}
-                                   hanldeImgFBtn={this.state.handleImgFBtn} handleImgBBtn={this.state.handleImgBBtn}/>}
+                                   handleImgFBtn={this.handleImgFBtn} handleImgBBtn={this.handleImgBBtn}/>}
             </div>
         );
     }
@@ -51,6 +51,7 @@ class App extends React.Component {
     forward(e) {
         // Increments pageNum
         if (this.state.pageNum >= 0 && this.state.pageNum < 9) {
+            document.getElementById("background").style.opacity = "0.3";
             this.setState({ pageNum: this.state.pageNum + 1});
             this.setState({moreInfo: false});
             this.setState({picNum: 1});
@@ -70,12 +71,14 @@ class App extends React.Component {
     back(e) {
         // Decrements pageNum
         if (this.state.pageNum > 0 && this.state.pageNum <= 9) {
+            document.getElementById("background").style.opacity = "0.3";
             this.setState({ pageNum: this.state.pageNum - 1})
             this.setState({moreInfo: false});
             this.setState({picNum: 1});
         }
         // Determines if the page component should be shown or hidden
         if (this.state.pageNum == 1) {
+            document.getElementById("background").style.opacity = "1";
             this.setState({ showPage: !this.state.showPage})
             this.setState({moreInfo: false});
             this.setState({picNum: 1});
@@ -88,6 +91,7 @@ class App extends React.Component {
     exit(e) {
         // Hides page component and resets pageNum to 0 if the user is in the tour.
         if (this.state.showPage == true) {
+            document.getElementById("background").style.opacity = "1";
             this.setState({showPage: !this.state.showPage});
             this.setState({pageNum: 0});
             this.setState({picNum: 1});
@@ -100,10 +104,12 @@ class App extends React.Component {
 
     handleImgFBtn(e) {
         this.setState({picNum: this.state.picNum + 1});
+        console.log(this.state.picNum);
     }
 
     handleImgBBtn(e) {
         this.setState({picNum: this.state.picNum - 1});
+        console.log(this.state.picNum);
     }
 }
 
