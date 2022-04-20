@@ -8,8 +8,18 @@
 
 import './Page.css';
 import React from "react";
+// page 1 pictures
 import img1 from "./stroubles_creek.jpg";
 import img2 from "./Daisy_beach.JPG";
+// page 2 pictures
+import img3 from "./grove1.jpg";
+import img4 from "./grove2.jpg";
+// page 3 pictures
+import img5 from "./roof1.jpg";
+import img6 from "./roof2.jpg";
+// page 4 pictures
+import img7 from "./rain1.jpg";
+import img8 from "./rain2.jpg";
 
 class Page extends React.Component {
 
@@ -29,6 +39,9 @@ class Page extends React.Component {
          let imgAmt; // the amount of images for that specific page
          let imgSrc; // the image to show
          let p1ImgArray = [img1, img2]; // array of images for page 1
+         let p2ImgArray = [img3, img4]; // array of images for page 2
+         let p3ImgArray = [img5, img6]; // array of images for page 3
+         let p4ImgArray = [img7, img8]; // array of images for page 4
          let imgFBtn; // button to control moving to the next image
          let imgBBtn; // button to control moving to the previous image
 
@@ -71,7 +84,7 @@ class Page extends React.Component {
                  else if (imgAmt > 1 && n == imgAmt) {
                      imgBBtn = <button type="button" className="imgBBtn" onClick={this.props.handleImgBBtn}>Previous Image</button>
                  }
-                 imgSrc = p1ImgArray[n - 1];
+                 imgSrc = p2ImgArray[n - 1];
              }
          }
          else if (p == 3) {
@@ -90,7 +103,7 @@ class Page extends React.Component {
                  else if (imgAmt > 1 && n == imgAmt) {
                      imgBBtn = <button type="button" className="imgBBtn" onClick={this.props.handleImgBBtn}>Previous Image</button>
                  }
-                 imgSrc = p1ImgArray[n - 1];
+                 imgSrc = p3ImgArray[n - 1];
              }
          }
          else if (p == 4) {
@@ -110,7 +123,7 @@ class Page extends React.Component {
                  else if (imgAmt > 1 && n == imgAmt) {
                      imgBBtn = <button type="button" className="imgBBtn" onClick={this.props.handleImgBBtn}>Previous Image</button>
                  }
-                 imgSrc = p1ImgArray[n - 1];
+                 imgSrc = p4ImgArray[n - 1];
              }
          }
          else if (p == 5) {
