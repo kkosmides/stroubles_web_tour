@@ -9,17 +9,17 @@
 import './Page.css';
 import React from "react";
 // page 1 pictures
-import img1 from "./smith_bioret.jpg";
-import img2 from "./smith_det.jpg";
+import img1 from "./smith_bioret.JPG";
+import img2 from "./smith_det.JPG";
 // page 2 pictures
-import img3 from "./grove1.jpg";
-import img4 from "./grove2.jpg";
+import img3 from "./grove1.JPG";
+import img4 from "./grove2.JPG";
 // page 3 pictures
-import img5 from "./roof1.jpg";
-import img6 from "./roof2.jpg";
+import img5 from "./roof1.JPG";
+import img6 from "./roof2.JPG";
 // page 4 pictures
-import img7 from "./rain1.jpg";
-import img8 from "./rain2.jpg";
+import img7 from "./rain1.JPG";
+import img8 from "./rain2.JPG";
 
 class Page extends React.Component {
 
