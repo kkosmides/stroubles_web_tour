@@ -9,8 +9,8 @@
 import './Page.css';
 import React from "react";
 // page 1 pictures
-import img1 from "./stroubles_creek.jpg";
-import img2 from "./Daisy_beach.JPG";
+import img1 from "./smith_bioret.jpg";
+import img2 from "./smith_det.jpg";
 // page 2 pictures
 import img3 from "./grove1.jpg";
 import img4 from "./grove2.jpg";
@@ -46,28 +46,29 @@ class Page extends React.Component {
          let imgBBtn; // button to control moving to the previous image
 
          // Determines which page the user is on, then sets text accordingly
-         if (p == 1) {
+         if (p === 1) {
              if (moreInfo) {
                  text = <a href="https://reports.aashe.org/institutions/virginia-tech-va/report/2013-03-19/OP/water/OP-23/"> STARS: A Program of AASHE</a>
              }
              else {
                  text = <p align="justify">The Smithfield Lot has three parts to it.
                      The first is the Smithfield lot Bioretention Pretreatment. This is upstream of the bioretention and uses a natural filter
-                     to keep out solid debris. The water is distributed evenely into the bioretention pond. The next part is the biorention pond.
+                     to keep out solid debris. The water is distributed evenly into the bioretention pond. The next part is the biorention pond.
                      Using filtration media, the Smithfield Biorention pond filters the water to remove sediment and pollutants before its flows 
                      back into the storm water system. The final part to the Smithfield lot is the extended detention. The extended detetion 
-                     gradually release water to increase settling polluntants and protect downstream channels. </p>
+                     gradually release water to increase settling polluntants and protect downstream channels. 
+                     </p>
                  imgAmt = 2;
                  if (imgAmt > 1 && n < imgAmt) {
                      imgFBtn = <button type="button" className="imgFBtn" onClick={this.props.handleImgFBtn}>Next Image</button>
                  }
-                 else if (imgAmt > 1 && n == imgAmt) {
+                 else if (imgAmt > 1 && n === imgAmt) {
                      imgBBtn = <button type="button" className="imgBBtn" onClick={this.props.handleImgBBtn}>Previous Image</button>
                  }
                  imgSrc = p1ImgArray[n - 1];
              }
          }
-         else if (p == 2) {
+         else if (p === 2) {
              if (moreInfo) {
                  text = <a href="https://www.facilities.vt.edu/content/dam/facilities_vt_edu/stormwater/Virginia%20Tech%202020%20MS4%20Annual%20Report.pdf"> Link</a>
              }
@@ -81,13 +82,13 @@ class Page extends React.Component {
                  if (imgAmt > 1 && n < imgAmt) {
                      imgFBtn = <button type="button" className="imgFBtn" onClick={this.props.handleImgFBtn}>Next Image</button>
                  }
-                 else if (imgAmt > 1 && n == imgAmt) {
+                 else if (imgAmt > 1 && n === imgAmt) {
                      imgBBtn = <button type="button" className="imgBBtn" onClick={this.props.handleImgBBtn}>Previous Image</button>
                  }
                  imgSrc = p2ImgArray[n - 1];
              }
          }
-         else if (p == 3) {
+         else if (p === 3) {
              if (moreInfo) {
                  text = <a href="https://www.nps.gov/tps/sustainability/new-technology/green-roofs/define.html">Link 1</a>
                  text2 = <a href="https://vtx.vt.edu/articles/2012/07/070312-caus-greenroof.html"> Link 2 </a>
@@ -100,13 +101,13 @@ class Page extends React.Component {
                  if (imgAmt > 1 && n < imgAmt) {
                      imgFBtn = <button type="button" className="imgFBtn" onClick={this.props.handleImgFBtn}>Next Image</button>
                  }
-                 else if (imgAmt > 1 && n == imgAmt) {
+                 else if (imgAmt > 1 && n === imgAmt) {
                      imgBBtn = <button type="button" className="imgBBtn" onClick={this.props.handleImgBBtn}>Previous Image</button>
                  }
                  imgSrc = p3ImgArray[n - 1];
              }
          }
-         else if (p == 4) {
+         else if (p === 4) {
              if (moreInfo) {
                  text = <a href="https://www.epa.gov/soakuptherain/soak-rain-rain-gardens">Link 1 </a>
                  text2 = <a href="https://resilientvirginia.org/vsbn_archives/20071026_016_Va_Tech.pdf"> Link 2</a>
