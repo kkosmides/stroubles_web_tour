@@ -20,6 +20,10 @@ import img6 from "./roof2.JPG";
 // page 4 pictures
 import img7 from "./rain1.JPG";
 import img8 from "./rain2.JPG";
+// war memorial pics
+import wm1 from "./war_mem1.png";
+import wm2 from "./war_mem2.png";
+import wm3 from "./war_mem3.png";
 
 class Page extends React.Component {
 
