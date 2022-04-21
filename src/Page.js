@@ -162,10 +162,18 @@ class Page extends React.Component {
          }
          else if (p == 6) {
              if (moreInfo) {
-                 text = <a href="">Some links here.</a>
+                 text = <a href="https://create.piktochart.com/output/20516777-scip-infographicfeb2017">Infographic on Stroubles Creek</a>
+                 text = <a href="http://www.collegiatetimes.com/news/virginia_tech/sinking-drillfield-rumors-exposed/article_9ec48152-572e-5c05-99b9-c7ee4e391b66.html">News Article on Rumors Partaining to the Creek</a>
              }
              else {
-                 text = <p align="justify">This is page 6.</p>
+                 text = <p align="justify">Stroubles Creek was burried underneath The Drillfield running by War Memorial Gym around 1937. The creek used to
+                                           run above ground and now most of it runs under Blacksburg and the campus. The fact that the creek is underground
+                                           almost reinforces the idea of "out of sight, out of mind", for the fact that many poeople do not know the creek 
+                                           runs under campus.
+                                               
+                                           The creek in this section is burried in a three-sided culvert, leaving the bottom of the creek exposed to the
+                                           natural earth beneath it. With the creek being burried underneath the drill field it is responsible for most
+                                           of the flooding that happens here, but is not making the Drillfield sink which is contrary to many rumors.</p>
                  imgAmt = 2;
                  if (imgAmt > 1 && n < imgAmt) {
                      imgFBtn = <button type="button" className="imgFBtn" onClick={this.props.handleImgFBtn}>Next Image</button>
@@ -178,10 +186,17 @@ class Page extends React.Component {
          }
          else if (p == 7) {
              if (moreInfo) {
-                 text = <a href="">Some links here.</a>
+                 text = <a href="https://www.dhr.virginia.gov/pdf_files/SpecialCollections/MY-059_Survey_Historic_AH_BlacksburgHD_1997_WORSHAM_report.pdf">Survey Report of Historic Blacksburg</a>
+                 text = <a href="https://16frogs.org/frogs/millie.html">16 Frogs: Millie</a>
              }
              else {
-                 text = <p align="justify">This is page 7.</p>
+                 text = <p align="justify">This location is the Old Mill of Blacksburg. It was built originally for the Blacksburg Milling and Supply Company
+                                           which supplied flour and farm to Blacksbug when it ran. The mill had five flour rollers and a stone wheel which
+                                           were all power from Stroubles Creek. In 1940 it saw a small renovation when it was clad in brick so that there could
+                                           be housing on the upper floors. Now to represent this location there is a metal frog named Millie which is a part of
+                                           the 16 Frogs Tour (see link for more information). 
+                                           
+                                           Now this location is the Rivermill Bar and Grill.</p>
                  imgAmt = 2;
                  if (imgAmt > 1 && n < imgAmt) {
                      imgFBtn = <button type="button" className="imgFBtn" onClick={this.props.handleImgFBtn}>Next Image</button>
