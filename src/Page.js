@@ -21,9 +21,9 @@ import img6 from "./roof2.JPG";
 import img7 from "./rain1.JPG";
 import img8 from "./rain2.JPG";
 // war memorial pics
-import wm1 from "./war_mem1.png";
-import wm2 from "./war_mem2.png";
-import wm3 from "./war_mem3.png";
+import img9 from "./war_mem1.png";
+import img10 from "./war_mem2.png";
+import img11 from "./war_mem3.png";
 
 class Page extends React.Component {
 
@@ -133,10 +133,23 @@ class Page extends React.Component {
          }
          else if (p == 5) {
              if (moreInfo) {
-                 text = <a href="">Some links here.</a>
+                 text = <a href="https://vtechworks.lib.vt.edu/bitstream/handle/10919/49495/VWRRC_sr201048.pdf">Virginia Tech Published Article</a>
+                 text1 = <a href="https://kids.kiddle.co/Stroubles_Creek">Fun Facts of Stroubles Creek for Kids.</a>
+                 text2 = <a href="https://www.archive.vtmag.vt.edu/fall14/duck-pond.html#:~:text=Artificially%20created%20in%20the%20mid,other%20fish%20released%20into%20it">Virginia Tech Archives Article</a>
+                 text3 = <a href="https://www.wsls.com/features/2022/01/13/wintry-cuteness-otters-spotted-playing-on-ice-at-virginia-tech-duck-pond/">News Article Highlighting the Otters</a>
              }
              else {
-                 text = <p align="justify">This is page 5.</p>
+                 text = <p align="justify">The Duck Pond is a crucial feature in Stroubles Creek as it is the merge point between the two
+                     main branches, The Main Branch and The Webb Branch. Connected to the pond is a sewer line that feeds into a water 
+                     treatment plant. Another important feature near the duckpond is a man-made wetland which serves as a storm basin, 
+                     this is located just outh of the Holtzman Alumni Center. 
+                         
+                     The Duck Pond is one of the most important ecosystems and serves as a habitat for numerious fish, mamals, birds and
+                     vegetation. Some waterfowl that call this water home are Canadian Geese, Mallard Ducks, and Muscovy Ducks. One
+                     mamal that caught the eye of many was a pair of otters, who were spotting January 2022 frolicking on the frozen pond.
+                     Under the surface Common Carp, Redbreast Sunfish, Mosquito Fish, White Suckers, and Blackbullheads thrive and call the
+                     water home. These species even attract anglers who can compete in the College of Natural Resources and Environmental 
+                     informal fishing tournament.</p>
                  imgAmt = 2;
                  if (imgAmt > 1 && n < imgAmt) {
                      imgFBtn = <button type="button" className="imgFBtn" onClick={this.props.handleImgFBtn}>Next Image</button>
