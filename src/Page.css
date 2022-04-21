@@ -22,19 +22,19 @@
 
 #infoImg {
     width: 55vw;
-    height: 55vh;
+    height: 50vh;
 }
 
 p {
     position: absolute;
-    top: 60vh;
+    top: 54vh;
     padding-right: 10px;
 }
 
 .moreInfo {
     position: absolute;
     left: 23vw;
-    top: 77vh;
+    top: 78vh;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -46,11 +46,11 @@ p {
 .imgBBtn {
     position: absolute;
     left: 2vh;
-    top: 57vh;
+    top: 52vh;
 }
 
 .imgFBtn {
     position: absolute;
     left: 70vh;
-    top: 57vh;
+    top: 52vh;
 }

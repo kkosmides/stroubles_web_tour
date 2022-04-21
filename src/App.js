@@ -49,6 +49,7 @@ class App extends React.Component {
      * which page the user is on and determines whether the page component should be shown.
      */
     forward(e) {
+        console.log(this.state.pageNum);
         // Increments pageNum
         if (this.state.pageNum >= 0 && this.state.pageNum < 9) {
             document.getElementById("background").style.opacity = "0.3";

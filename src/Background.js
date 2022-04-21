@@ -31,7 +31,7 @@ class Background extends React.Component {
                  </div>
              );
          }
-         else if (pageNum < 8) {
+         else if (pageNum < 9) {
              return(
                  <div id="buttons">
                      <div id="background">
