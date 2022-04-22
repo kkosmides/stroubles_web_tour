@@ -2,7 +2,7 @@
  * Stroubles Creek Web Tour
  * Page component JavaScript source code
  *
- * Author: Katrina Kosmides
+ * Author: Katrina Kosmides, Matt Zambetti
  * Version: 1.0
  */
 
