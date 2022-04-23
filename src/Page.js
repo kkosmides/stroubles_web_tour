@@ -9,17 +9,17 @@
 import './Page.css';
 import React from "react";
 // page 1 pictures
-import img1 from "./photos/smith_bioret.JPG";
-import img2 from "./photos/smith_det.JPG";
+import img1 from "./photos/smithfield1.jpg";
+import img2 from "./photos/smithfield2.jpg";
 // page 2 pictures
-import img3 from "./photos/grove1.JPG";
-import img4 from "./photos/grove2.JPG";
+import img3 from "./photos/grove1.jpg";
+import img4 from "./photos/grove2.jpg";
 // page 3 pictures
-import img5 from "./photos/roof1.JPG";
-import img6 from "./photos/roof2.jpg";
+import img5 from "./photos/green_roof.jpg";
+import img6 from "./photos/green_roof2.jpg";
 // page 4 pictures
-import img7 from "./photos/rain1.JPG";
-import img8 from "./photos/rain2.JPG";
+import img7 from "./photos/rain1.jpg";
+import img8 from "./photos/rain2.jpg";
 // page 5 pictures
 import img9 from "./photos/duckpond1.jpg";
 import img10 from "./photos/duckpond2.jpg";
@@ -29,6 +29,9 @@ import img12 from "./photos/duckpond4.jpg";
 import img13 from "./photos/war_mem1.png";
 import img14 from "./photos/war_mem2.png";
 import img15 from "./photos/war_mem3.jpg";
+// conclusion pics
+import img16 from "./photos/conclusion2.png";
+import img17 from "./photos/conclusion1.png";
 
 class Page extends React.Component {
 
@@ -48,12 +51,15 @@ class Page extends React.Component {
          let text4; // fourth link if there is one
          let imgAmt; // the amount of images for that specific page
          let imgSrc; // the image to show
-         let p1ImgArray = [img1, img2]; // array of images for page 1
-         let p2ImgArray = [img3, img4]; // array of images for page 2
-         let p3ImgArray = [img5, img6]; // array of images for page 3
-         let p4ImgArray = [img7, img8]; // array of images for page 4
-         let p5ImgArray = [img9, img10, img11, img12]; // array of images for page 5
-         let p6ImgArray = [img13, img14, img15];
+         let p1ImgArray = [img1, img2]; // array of images for page 1 (Smithfield)
+         let p2ImgArray = [img3, img4]; // array of images for page 2 (Grove)
+         let p3ImgArray = [img5, img6]; // array of images for page 3 (Life Sciences)
+         let p4ImgArray = [img7, img8]; // array of images for page 4 (Rain Garden)
+         let p5ImgArray = [img9, img10, img11, img12]; // array of images for page 5 (Duck Pond)
+         let p6ImgArray = [img13, img14, img15]; // array of images for page 6 (War Memorial Gym)
+         let p7ImgArray = []; // array of images for page 7 (Old Mill)
+         let p8ImgArray = []; // array of images for page 8
+         let p9ImgArray = [img16, img17]; // array of images for page 9
          let imgFBtn; // button to control moving to the next image
          let imgBBtn; // button to control moving to the previous image
 
@@ -280,7 +286,7 @@ class Page extends React.Component {
                  else if (imgAmt > 1 && n == imgAmt) {
                      imgBBtn = <button type="button" className="imgBBtn" onClick={this.props.handleImgBBtn}>Previous Image</button>
                  }
-                 imgSrc = p1ImgArray[n - 1];
+                 imgSrc = p9ImgArray[n - 1];
              }
          }
 

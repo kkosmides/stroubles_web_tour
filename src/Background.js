@@ -22,6 +22,17 @@ class Background extends React.Component {
          let pageNum = this.props.pageNum;
 
          // Returns buttons
+
+         // maybe add an intro page here start with pagenum = -1
+         if (pageNum == -1) {
+             return (
+               <div id="intro">
+                   <div id="background">
+                   </div>
+                   <button type="button" className="starter">Let's begin!</button>
+               </div>
+             );
+         }
          if (pageNum == 0) {
              return(
                  <div id="buttons">

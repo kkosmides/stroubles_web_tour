@@ -6,6 +6,20 @@
  * Version: 1.0
  */
 
+#intro {
+    position: fixed;
+    top: 10vh;
+    left: 27.5vw;
+    height: 80vh;
+    width: 45vw;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    padding: 8px;
+    border-style: groove;
+    border-color: darkgray;
+}
+
 #background {
     background-image: url("photos/stroubles_creek.jpg");
     background-repeat: no-repeat;
@@ -57,4 +71,5 @@
     border-radius: 12px;
     font-size: 20px;
     z-index: 1;
+    cursor: pointer;
 }

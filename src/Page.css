@@ -9,9 +9,9 @@
 #infoTemplate {
     position: fixed;
     top: 10vh;
-    left: 25vw;
+    left: 27.5vw;
     height: 80vh;
-    width: 55vw;
+    width: 45vw;
     justify-content: center;
     align-items: center;
     background-color: white;
@@ -21,7 +21,7 @@
 }
 
 #infoImg {
-    width: 55vw;
+    width: 45vw;
     height: 50vh;
 }
 
@@ -33,7 +33,7 @@ p {
 
 .moreInfo {
     position: absolute;
-    left: 23vw;
+    left: 20vw;
     top: 78vh;
     text-align: center;
     text-decoration: none;
@@ -47,10 +47,16 @@ p {
     position: absolute;
     left: 2vh;
     top: 52vh;
+    cursor: pointer;
 }
 
 .imgFBtn {
     position: absolute;
-    left: 70vh;
+    left: 84vh;
     top: 52vh;
+    cursor: pointer;
+}
+
+.exitMoreInfo {
+    cursor: pointer;
 }
