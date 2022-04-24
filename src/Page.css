@@ -27,13 +27,15 @@
 
 p {
     position: absolute;
+    overflow-y: scroll;
     top: 54vh;
+    height: 180px;
     padding-right: 10px;
 }
 
 .moreInfo {
     position: absolute;
-    left: 20vw;
+    left: 18.5vw;
     top: 78vh;
     text-align: center;
     text-decoration: none;
@@ -52,7 +54,7 @@ p {
 
 .imgFBtn {
     position: absolute;
-    left: 84vh;
+    left: 70vh;
     top: 52vh;
     cursor: pointer;
 }

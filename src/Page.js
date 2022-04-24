@@ -64,6 +64,7 @@ class Page extends React.Component {
          let imgBBtn; // button to control moving to the previous image
 
          // Determines which page the user is on, then sets text accordingly
+
          if (p === 1) {
              if (moreInfo) {
                  // External links for more information
@@ -303,7 +304,7 @@ class Page extends React.Component {
              );
          }
          else {
-             if (p == 9) {
+             if (p === 9) {
                  return (
                      <div id="infoTemplate">
                          <img id="infoImg" src={imgSrc}/>

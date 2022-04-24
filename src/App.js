@@ -50,6 +50,9 @@ class App extends React.Component {
      */
     forward(e) {
         console.log(this.state.pageNum);
+        if (this.state.pageNum == 0) {
+            this.setState({pageNum: this.state.pageNum + 1});
+        }
         // Increments pageNum
         if (this.state.pageNum >= 0 && this.state.pageNum < 9) {
             document.getElementById("background").style.opacity = "0.3";
