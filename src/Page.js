@@ -277,7 +277,9 @@ class Page extends React.Component {
              }
              else {
                  // Photo and location description
-                 text = <p align="justify">Thank you for taking our tour:)</p>
+                 text = <p align="justify"> The 12 mile stream has played a key role in the town of Blacksburg, Virginia Tech, and Montgomery County. 
+                 Stroubles Creek has been designated an impaired waterway. It is important for us to continue learning about the creek in order for us to protect it. 
+                 Thank you for taking our tour and learning about Stroubles Creek :) </p>
 
                  // Forward and back buttons for images and sets image
                  imgAmt = 2;
