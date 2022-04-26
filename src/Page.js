@@ -269,7 +269,10 @@ class Page extends React.Component {
              }
              else {
                  // Photo and location description
-                 text = <p align="justify">This is page 8.</p>
+                 text = <p align="justify">This is the trail camera along the creek near Fox Ridge apartments.
+                     This sight is known to have plenty of animal traffic that includes small and some large game.
+                     Some featured mamal images at this locaition include otter, muskrat, mink, weasel, deer, bobcat, 
+                     and beaver. Species of birds similar to the duck pond also reside here.</p>
 
                  // Forward and back buttons for images and sets image
                  imgAmt = 3;
