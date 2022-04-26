@@ -8,8 +8,8 @@
 
 #intro {
     position: absolute;
-    top: 20vh;
-    left: 27.5vw;
+    top: 4vh;
+    left: 2vw;
     height: 50vh;
     width: 45vw;
     justify-content: center;
@@ -24,7 +24,7 @@
 }
 
 #background {
-    background-image: url("photos/stroubles_creek.jpg");
+    background-image: url("photos/Stroubles2.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;

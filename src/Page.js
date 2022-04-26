@@ -9,29 +9,39 @@
 import './Page.css';
 import React from "react";
 // page 1 pictures
+import img0 from "./photos/smith.jpg";
 import img1 from "./photos/smithfield1.jpg";
 import img2 from "./photos/smithfield2.jpg";
 // page 2 pictures
+import img2_2 from "./photos/grove.jpg";
 import img3 from "./photos/grove1.jpg";
 import img4 from "./photos/grove2.jpg";
 // page 3 pictures
+// life sciences
 import img5 from "./photos/green_roof.jpg";
 import img6 from "./photos/green_roof2.jpg";
 // page 4 pictures
+import img6_2 from "./photos/icat.jpg";
 import img7 from "./photos/rain1.jpg";
 import img8 from "./photos/rain2.jpg";
 // page 5 pictures
+import img8_2 from "./photos/duckpond.jpg";
 import img9 from "./photos/duckpond1.jpg";
 import img10 from "./photos/duckpond2.jpg";
 import img11 from "./photos/duckpond3.jpg";
 import img12 from "./photos/duckpond4.jpg";
 // war memorial pics
+import img12_2 from "./photos/war.jpg";
 import img13 from "./photos/war_mem1.png";
 import img14 from "./photos/war_mem2.png";
 import img15 from "./photos/war_mem3.jpg";
 // conclusion pics
 import img16 from "./photos/conclusion2.png";
 import img17 from "./photos/conclusion1.png";
+// old mill
+import img17_2 from "./photos/mill.jpg";
+import img18 from "./photos/oldblacksburgmill.jpg";
+import img19 from "./photos/oldblacksburgmill2.jpg";
 
 class Page extends React.Component {
 
@@ -51,13 +61,13 @@ class Page extends React.Component {
          let text4; // fourth link if there is one
          let imgAmt; // the amount of images for that specific page
          let imgSrc; // the image to show
-         let p1ImgArray = [img1, img2]; // array of images for page 1 (Smithfield)
-         let p2ImgArray = [img3, img4]; // array of images for page 2 (Grove)
+         let p1ImgArray = [img1, img2, img0]; // array of images for page 1 (Smithfield)
+         let p2ImgArray = [img3, img4, img2_2]; // array of images for page 2 (Grove)
          let p3ImgArray = [img5, img6]; // array of images for page 3 (Life Sciences)
-         let p4ImgArray = [img7, img8]; // array of images for page 4 (Rain Garden)
-         let p5ImgArray = [img9, img10, img11, img12]; // array of images for page 5 (Duck Pond)
-         let p6ImgArray = [img13, img14, img15]; // array of images for page 6 (War Memorial Gym)
-         let p7ImgArray = []; // array of images for page 7 (Old Mill)
+         let p4ImgArray = [img7, img8, img6_2]; // array of images for page 4 (Rain Garden)
+         let p5ImgArray = [img9, img10, img11, img12, img8_2]; // array of images for page 5 (Duck Pond)
+         let p6ImgArray = [img13, img14, img15, img12_2]; // array of images for page 6 (War Memorial Gym)
+         let p7ImgArray = [img18, img19, img17_2]; // array of images for page 7 (Old Mill)
          let p8ImgArray = []; // array of images for page 8
          let p9ImgArray = [img16, img17]; // array of images for page 9
          let imgFBtn; // button to control moving to the next image
@@ -81,12 +91,14 @@ class Page extends React.Component {
                      </p>
 
                  // Forward and back buttons for images and sets image
-                 imgAmt = 2;
-                 if (imgAmt > 1 && n < imgAmt) {
+                 imgAmt = 3;
+                 if (n < imgAmt) {
                      imgFBtn = <button type="button" className="imgFBtn" onClick={this.props.handleImgFBtn}>Next Image</button>
+                     console.log(n);
                  }
-                 else if (imgAmt > 1 && n === imgAmt) {
+                 if (n > 1) {
                      imgBBtn = <button type="button" className="imgBBtn" onClick={this.props.handleImgBBtn}>Previous Image</button>
+                     console.log(n);
                  }
                  imgSrc = p1ImgArray[n - 1];
              }
@@ -105,11 +117,11 @@ class Page extends React.Component {
                  </p>
 
                  // Forward and back buttons for images and sets image
-                 imgAmt = 2;
-                 if (imgAmt > 1 && n < imgAmt) {
+                 imgAmt = 3;
+                 if (n < imgAmt) {
                      imgFBtn = <button type="button" className="imgFBtn" onClick={this.props.handleImgFBtn}>Next Image</button>
                  }
-                 else if (imgAmt > 1 && n === imgAmt) {
+                 if (n > 1) {
                      imgBBtn = <button type="button" className="imgBBtn" onClick={this.props.handleImgBBtn}>Previous Image</button>
                  }
                  imgSrc = p2ImgArray[n - 1];
@@ -129,10 +141,10 @@ class Page extends React.Component {
 
                  // Forward and back buttons for images and sets image
                  imgAmt = 2;
-                 if (imgAmt > 1 && n < imgAmt) {
+                 if (n < imgAmt) {
                      imgFBtn = <button type="button" className="imgFBtn" onClick={this.props.handleImgFBtn}>Next Image</button>
                  }
-                 else if (imgAmt > 1 && n === imgAmt) {
+                 if (n > 1) {
                      imgBBtn = <button type="button" className="imgBBtn" onClick={this.props.handleImgBBtn}>Previous Image</button>
                  }
                  imgSrc = p3ImgArray[n - 1];
@@ -152,11 +164,11 @@ class Page extends React.Component {
                  </p>
 
                  // Forward and back buttons for images and sets image
-                 imgAmt = 2;
-                 if (imgAmt > 1 && n < imgAmt) {
+                 imgAmt = 3;
+                 if (n < imgAmt) {
                      imgFBtn = <button type="button" className="imgFBtn" onClick={this.props.handleImgFBtn}>Next Image</button>
                  }
-                 else if (imgAmt > 1 && n == imgAmt) {
+                 if (n > 1) {
                      imgBBtn = <button type="button" className="imgBBtn" onClick={this.props.handleImgBBtn}>Previous Image</button>
                  }
                  imgSrc = p4ImgArray[n - 1];
@@ -185,11 +197,11 @@ class Page extends React.Component {
                      informal fishing tournament.</p>
 
                  // Forward and back buttons for images and sets image
-                 imgAmt = 2;
-                 if (imgAmt > 1 && n < imgAmt) {
+                 imgAmt = 5;
+                 if (n < imgAmt) {
                      imgFBtn = <button type="button" className="imgFBtn" onClick={this.props.handleImgFBtn}>Next Image</button>
                  }
-                 else if (imgAmt > 1 && n == imgAmt) {
+                 if (n > 1) {
                      imgBBtn = <button type="button" className="imgBBtn" onClick={this.props.handleImgBBtn}>Previous Image</button>
                  }
                  imgSrc = p5ImgArray[n - 1];
@@ -213,11 +225,11 @@ class Page extends React.Component {
                                            of the flooding that happens here, but is not making the Drillfield sink which is contrary to many rumors.</p>
 
                  // Forward and back buttons for images and sets image
-                 imgAmt = 2;
-                 if (imgAmt > 1 && n < imgAmt) {
+                 imgAmt = 4;
+                 if (n < imgAmt) {
                      imgFBtn = <button type="button" className="imgFBtn" onClick={this.props.handleImgFBtn}>Next Image</button>
                  }
-                 else if (imgAmt > 1 && n == imgAmt) {
+                 if (n > 1) {
                      imgBBtn = <button type="button" className="imgBBtn" onClick={this.props.handleImgBBtn}>Previous Image</button>
                  }
                  imgSrc = p6ImgArray[n - 1];
@@ -240,14 +252,14 @@ class Page extends React.Component {
                                            Now this location is the Rivermill Bar and Grill.</p>
 
                  // Forward and back buttons for images and sets image
-                 imgAmt = 2;
-                 if (imgAmt > 1 && n < imgAmt) {
+                 imgAmt = 3;
+                 if (n < imgAmt) {
                      imgFBtn = <button type="button" className="imgFBtn" onClick={this.props.handleImgFBtn}>Next Image</button>
                  }
-                 else if (imgAmt > 1 && n == imgAmt) {
+                 if (n > 1) {
                      imgBBtn = <button type="button" className="imgBBtn" onClick={this.props.handleImgBBtn}>Previous Image</button>
                  }
-                 imgSrc = p1ImgArray[n - 1];
+                 imgSrc = p7ImgArray[n - 1];
              }
          }
          else if (p == 8) {
@@ -260,11 +272,11 @@ class Page extends React.Component {
                  text = <p align="justify">This is page 8.</p>
 
                  // Forward and back buttons for images and sets image
-                 imgAmt = 2;
+                 imgAmt = 3;
                  if (imgAmt > 1 && n < imgAmt) {
                      imgFBtn = <button type="button" className="imgFBtn" onClick={this.props.handleImgFBtn}>Next Image</button>
                  }
-                 else if (imgAmt > 1 && n == imgAmt) {
+                 if (imgAmt > 1 && n == imgAmt) {
                      imgBBtn = <button type="button" className="imgBBtn" onClick={this.props.handleImgBBtn}>Previous Image</button>
                  }
                  imgSrc = p1ImgArray[n - 1];
@@ -286,7 +298,7 @@ class Page extends React.Component {
                  if (imgAmt > 1 && n < imgAmt) {
                      imgFBtn = <button type="button" className="imgFBtn" onClick={this.props.handleImgFBtn}>Next Image</button>
                  }
-                 else if (imgAmt > 1 && n == imgAmt) {
+                 if (imgAmt > 1 && n == imgAmt) {
                      imgBBtn = <button type="button" className="imgBBtn" onClick={this.props.handleImgBBtn}>Previous Image</button>
                  }
                  imgSrc = p9ImgArray[n - 1];
@@ -313,7 +325,6 @@ class Page extends React.Component {
                          {imgFBtn}
                          {imgBBtn}
                          {text}
-                         <button type="button" className="moreInfo" onClick={this.props.handleMoreInfo}>Sources</button>
                      </div>
                  );
              }

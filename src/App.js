@@ -49,7 +49,6 @@ class App extends React.Component {
      * which page the user is on and determines whether the page component should be shown.
      */
     forward(e) {
-        console.log(this.state.pageNum);
         if (this.state.pageNum == 0) {
             this.setState({pageNum: this.state.pageNum + 1});
         }
@@ -108,12 +107,10 @@ class App extends React.Component {
 
     handleImgFBtn(e) {
         this.setState({picNum: this.state.picNum + 1});
-        console.log(this.state.picNum);
     }
 
     handleImgBBtn(e) {
         this.setState({picNum: this.state.picNum - 1});
-        console.log(this.state.picNum);
     }
 }
 
