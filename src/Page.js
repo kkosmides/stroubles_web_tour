@@ -136,7 +136,7 @@ class Page extends React.Component {
          else if (p === 3) {
              if (moreInfo) {
                  // External links for more information
-                 text = <a href="https://www.nps.gov/tps/sustainability/new-technology/green-roofs/define.html">NPS</a>
+                 text = <a href="https://www.nps.gov/tps/sustainability/new-technology/green-roofs/define.htm">NPS</a>
                  text2 = <a href="https://vtx.vt.edu/articles/2012/07/070312-caus-greenroof.html"> Green Roof Designs </a>
              }
              else {
