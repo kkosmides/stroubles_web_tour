@@ -18,6 +18,7 @@ import img3 from "./photos/grove1.jpg";
 import img4 from "./photos/grove2.jpg";
 // page 3 pictures
 // life sciences
+import img4_2 from "./photos/life_science.jpg";
 import img5 from "./photos/green_roof.jpg";
 import img6 from "./photos/green_roof2.jpg";
 // page 4 pictures
@@ -42,6 +43,11 @@ import img17 from "./photos/conclusion1.png";
 import img17_2 from "./photos/mill.jpg";
 import img18 from "./photos/oldblacksburgmill.jpg";
 import img19 from "./photos/oldblacksburgmill2.jpg";
+// page 8
+import img20 from "./photos/foxridge.jpg";
+import img21 from  "./photos/page8.jpg";
+import img22 from "./photos/page8_2.JPG";
+import img23 from "./photos/page8_3.jpg";
 
 class Page extends React.Component {
 
@@ -63,12 +69,12 @@ class Page extends React.Component {
          let imgSrc; // the image to show
          let p1ImgArray = [img1, img2, img0]; // array of images for page 1 (Smithfield)
          let p2ImgArray = [img3, img4, img2_2]; // array of images for page 2 (Grove)
-         let p3ImgArray = [img5, img6]; // array of images for page 3 (Life Sciences)
+         let p3ImgArray = [img5, img6, img4_2]; // array of images for page 3 (Life Sciences)
          let p4ImgArray = [img7, img8, img6_2]; // array of images for page 4 (Rain Garden)
          let p5ImgArray = [img9, img10, img11, img12, img8_2]; // array of images for page 5 (Duck Pond)
          let p6ImgArray = [img13, img14, img15, img12_2]; // array of images for page 6 (War Memorial Gym)
          let p7ImgArray = [img18, img19, img17_2]; // array of images for page 7 (Old Mill)
-         let p8ImgArray = []; // array of images for page 8
+         let p8ImgArray = [img21, img22, img23, img20]; // array of images for page 8
          let p9ImgArray = [img16, img17]; // array of images for page 9
          let imgFBtn; // button to control moving to the next image
          let imgBBtn; // button to control moving to the previous image
@@ -106,7 +112,7 @@ class Page extends React.Component {
          else if (p === 2) {
              if (moreInfo) {
                  // External links for more information
-                 text = <a href="https://www.facilities.vt.edu/content/dam/facilities_vt_edu/stormwater/Virginia%20Tech%202020%20MS4%20Annual%20Report.pdf"> Link</a>
+                 text = <a href="https://www.facilities.vt.edu/content/dam/facilities_vt_edu/stormwater/Virginia%20Tech%202020%20MS4%20Annual%20Report.pdf"> VT MS4 Annual Report</a>
              }
              else {
                  // Photo and location description
@@ -130,8 +136,8 @@ class Page extends React.Component {
          else if (p === 3) {
              if (moreInfo) {
                  // External links for more information
-                 text = <a href="https://www.nps.gov/tps/sustainability/new-technology/green-roofs/define.html">Link 1</a>
-                 text2 = <a href="https://vtx.vt.edu/articles/2012/07/070312-caus-greenroof.html"> Link 2 </a>
+                 text = <a href="https://www.nps.gov/tps/sustainability/new-technology/green-roofs/define.html">NPS</a>
+                 text2 = <a href="https://vtx.vt.edu/articles/2012/07/070312-caus-greenroof.html"> Green Roof Designs </a>
              }
              else {
                  // Photo and location description
@@ -140,7 +146,7 @@ class Page extends React.Component {
                  </p>
 
                  // Forward and back buttons for images and sets image
-                 imgAmt = 2;
+                 imgAmt = 3;
                  if (n < imgAmt) {
                      imgFBtn = <button type="button" className="imgFBtn" onClick={this.props.handleImgFBtn}>Next Image</button>
                  }
@@ -153,9 +159,9 @@ class Page extends React.Component {
          else if (p === 4) {
              if (moreInfo) {
                  // External links for more information
-                 text = <a href="https://www.epa.gov/soakuptherain/soak-rain-rain-gardens">Link 1 </a>
-                 text2 = <a href="https://resilientvirginia.org/vsbn_archives/20071026_016_Va_Tech.pdf"> Link 2</a>
-                 text3 = <a href="https://www.facilities.vt.edu/content/dam/facilities_vt_edu/stormwater/Virginia%20Tech%202020%20MS4%20Annual%20Report.pdf">Link3 </a>
+                 text = <a href="https://www.epa.gov/soakuptherain/soak-rain-rain-gardens"> Rain Gardens </a>
+                 text2 = <a href="https://resilientvirginia.org/vsbn_archives/20071026_016_Va_Tech.pdf"> ICTAS II Planning and Building Design</a>
+                 text3 = <a href="https://www.facilities.vt.edu/content/dam/facilities_vt_edu/stormwater/Virginia%20Tech%202020%20MS4%20Annual%20Report.pdf"> VT MS4 Annual Report </a>
              }
              else {
                  // Photo and location description
@@ -275,14 +281,14 @@ class Page extends React.Component {
                      and beaver. Species of birds similar to the duck pond also reside here.</p>
 
                  // Forward and back buttons for images and sets image
-                 imgAmt = 3;
+                 imgAmt = 4;
                  if (imgAmt > 1 && n < imgAmt) {
                      imgFBtn = <button type="button" className="imgFBtn" onClick={this.props.handleImgFBtn}>Next Image</button>
                  }
                  if (imgAmt > 1 && n == imgAmt) {
                      imgBBtn = <button type="button" className="imgBBtn" onClick={this.props.handleImgBBtn}>Previous Image</button>
                  }
-                 imgSrc = p1ImgArray[n - 1];
+                 imgSrc = p8ImgArray[n - 1];
              }
          }
          else {
