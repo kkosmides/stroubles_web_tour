@@ -136,7 +136,7 @@ class Page extends React.Component {
          else if (p === 3) {
              if (moreInfo) {
                  // External links for more information
-                 text = <a href="https://www.nps.gov/tps/sustainability/new-technology/green-roofs/define.htm">NPS</a>
+                 text = <a href="https://www.nps.gov/tps/sustainability/new-technology/green-roofs/define.htm">NPS Green Roof</a>
                  text2 = <a href="https://vtx.vt.edu/articles/2012/07/070312-caus-greenroof.html"> Green Roof Designs </a>
              }
              else {
@@ -271,13 +271,13 @@ class Page extends React.Component {
          else if (p == 8) {
              if (moreInfo) {
                  // External links for more information
-                 text = <a href="">Some links here.</a>
+                 text = <a href="https://drive.google.com/drive/folders/1w15-C9s-IocZfT7dqrLAMepWU_QxAntZ">Trail Camera</a>
              }
              else {
                  // Photo and location description
-                 text = <p align="justify">This is the trail camera along the creek near Fox Ridge apartments.
+                 text = <p align="justify">This is the trail camera along the creek near Foxridge apartments.
                      This sight is known to have plenty of animal traffic that includes small and some large game.
-                     Some featured mamal images at this locaition include otter, muskrat, mink, weasel, deer, bobcat, 
+                     Some featured mammal images at this location include otter, muskrat, mink, weasel, deer, bobcat,
                      and beaver. Species of birds similar to the duck pond also reside here.</p>
 
                  // Forward and back buttons for images and sets image
