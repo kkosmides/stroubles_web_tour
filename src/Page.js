@@ -82,7 +82,7 @@ class Page extends React.Component {
              if (moreInfo) {
                  // External links for more information
                  text = <a href="https://reports.aashe.org/institutions/virginia-tech-va/report/2013-03-19/OP/water/OP-23/" target="_blank" rel="noreferrer noopener"> STARS: A Program of AASHE</a>
-                 text2 = <p>Virginia Science SOL 6.7b: The student will investigate and understand
+                 SOL = <p>Virginia Science SOL 6.7b: The student will investigate and understand
                  the natural processes and human interactions that affect watershed systems. 
                  The key concept of this SOL we are looking at here is the location and structure of Virginia’s regional watershed systems.</p>
              }
@@ -329,6 +329,7 @@ class Page extends React.Component {
                      {text3}<br />
                      {text4}<br />
                      <button type="button" className="exitMoreInfo" onClick={this.props.handleMoreInfo}>Back</button>
+                     {SOL}<br />
                  </div>
              );
          }
