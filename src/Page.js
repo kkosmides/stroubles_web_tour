@@ -62,6 +62,7 @@ class Page extends React.Component {
          let text2; // second link if there is one
          let text3; // third link if there is one
          let text4; // fourth link if there is one
+         let SOL; //SOL text
          let imgAmt; // the amount of images for that specific page
          let imgSrc; // the image to show
          let p1ImgArray = [img1, img2, img0]; // array of images for page 1 (Smithfield)
@@ -81,6 +82,9 @@ class Page extends React.Component {
              if (moreInfo) {
                  // External links for more information
                  text = <a href="https://reports.aashe.org/institutions/virginia-tech-va/report/2013-03-19/OP/water/OP-23/" target="_blank" rel="noreferrer noopener"> STARS: A Program of AASHE</a>
+                 text2 = <p>Virginia Science SOL 6.7b: The student will investigate and understand
+                 the natural processes and human interactions that affect watershed systems. 
+                 The key concept of this SOL we are looking at here is the location and structure of Virginia’s regional watershed systems.</p>
              }
              else {
                  // Photo and location description
@@ -106,6 +110,9 @@ class Page extends React.Component {
              if (moreInfo) {
                  // External links for more information
                  text = <a href="https://www.facilities.vt.edu/content/dam/facilities_vt_edu/stormwater/Virginia%20Tech%202020%20MS4%20Annual%20Report.pdf" target="_blank" rel="noreferrer noopener"> VT MS4 Annual Report</a>
+                 SOL = <p>Virginia Science SOL 6.7b: The student will investigate and understand
+                 the natural processes and human interactions that affect watershed systems. 
+                 The key concept of this SOL we are looking at here is the location and structure of Virginia’s regional watershed systems.</p>
              }
              else {
                  // Photo and location description
@@ -130,6 +137,9 @@ class Page extends React.Component {
                  // External links for more information
                  text = <a href="https://www.nps.gov/tps/sustainability/new-technology/green-roofs/define.htm" target="_blank" rel="noreferrer noopener">NPS Green Roof</a>
                  text2 = <a href="https://vtx.vt.edu/articles/2012/07/070312-caus-greenroof.html" target="_blank" rel="noreferrer noopener"> Green Roof Designs </a>
+                 SOL = <p>Virginia SOL WG.2b: The student will analyze how physical and ecological 
+                 processes shape Earth’s surface by describing 
+                 how humans influence the environment and are influenced by it.</p>
              }
              else {
                  // Photo and location description
@@ -153,6 +163,9 @@ class Page extends React.Component {
                  text = <a href="https://www.epa.gov/soakuptherain/soak-rain-rain-gardens" target="_blank" rel="noreferrer noopener"> Rain Gardens </a>
                  text2 = <a href="https://resilientvirginia.org/vsbn_archives/20071026_016_Va_Tech.pdf" target="_blank" rel="noreferrer noopener"> ICTAS II Planning and Building Design</a>
                  text3 = <a href="https://www.facilities.vt.edu/content/dam/facilities_vt_edu/stormwater/Virginia%20Tech%202020%20MS4%20Annual%20Report.pdf" target="_blank" rel="noreferrer noopener"> VT MS4 Annual Report </a>
+                 SOL = <p>Virginia SOL WG.2b: The student will analyze how physical and ecological 
+                 processes shape Earth’s surface by describing 
+                 how humans influence the environment and are influenced by it.</p>
              }
              else {
                  // Photo and location description
@@ -177,6 +190,9 @@ class Page extends React.Component {
                  text2 = <a href="https://kids.kiddle.co/Stroubles_Creek" target="_blank" rel="noreferrer noopener">Fun Facts of Stroubles Creek for Kids.</a>
                  text3 = <a href="https://www.archive.vtmag.vt.edu/fall14/duck-pond.html#:~:text=Artificially%20created%20in%20the%20mid,other%20fish%20released%20into%20it" target="_blank" rel="noreferrer noopener">Virginia Tech Archives Article</a>
                  text4 = <a href="https://www.wsls.com/features/2022/01/13/wintry-cuteness-otters-spotted-playing-on-ice-at-virginia-tech-duck-pond/" target="_blank" rel="noreferrer noopener">News Article Highlighting the Otters</a>
+                 SOL = <p>Virginia Science SOL 6.7a: The student will investigate and understand
+                 the natural processes and human interactions that affect watershed systems.
+                 The key concept of this SOL we are looking at here is the health of ecosystems and the abiotic factors of a watershed.</p>
              }
              else {
                  // Photo and location description
@@ -207,6 +223,9 @@ class Page extends React.Component {
                  // External links for more information
                  text = <a href="https://create.piktochart.com/output/20516777-scip-infographicfeb2017" target="_blank" rel="noreferrer noopener">Infographic on Stroubles Creek</a>
                  text2 = <a href="http://www.collegiatetimes.com/news/virginia_tech/sinking-drillfield-rumors-exposed/article_9ec48152-572e-5c05-99b9-c7ee4e391b66.html" target="_blank" rel="noreferrer noopener">News Article on Rumors Partaining to the Creek</a>
+                 SOL = <p>Virginia SOL VS.1b:  The student will demonstrate skills for historical thinking,
+                     geographical analysis, economic decision making, and responsible citizenship by analyzing the impact of geographic features on 
+                     people, places, and events to support an understanding of events in Virginia history.</p>
              }
              else {
                  // Photo and location description
@@ -234,6 +253,9 @@ class Page extends React.Component {
                  // External links for more information
                  text = <a href="https://www.dhr.virginia.gov/pdf_files/SpecialCollections/MY-059_Survey_Historic_AH_BlacksburgHD_1997_WORSHAM_report.pdf" target="_blank" rel="noreferrer noopener">Survey Report of Historic Blacksburg</a>
                  text2 = <a href="https://16frogs.org/frogs/millie.html" target="_blank" rel="noreferrer noopener">16 Frogs: Millie</a>
+                 SOL = <p>Virginia SOL VS.1b:  The student will demonstrate skills for historical thinking,
+                     geographical analysis, economic decision making, and responsible citizenship by analyzing the impact of geographic features on 
+                     people, places, and events to support an understanding of events in Virginia history.</p>
              }
              else {
                  // Photo and location description
@@ -259,6 +281,9 @@ class Page extends React.Component {
              if (moreInfo) {
                  // External links for more information
                  text = <a href="https://drive.google.com/drive/folders/1w15-C9s-IocZfT7dqrLAMepWU_QxAntZ" target="_blank" rel="noreferrer noopener">Trail Camera</a>
+                 SOL = <p>Virginia Science SOL 6.7a: The student will investigate and understand
+                 the natural processes and human interactions that affect watershed systems.
+                 The key concept of this SOL we are looking at here is the health of ecosystems and the abiotic factors of a watershed.</p>
              }
              else {
                  // Photo and location description
