@@ -2,48 +2,47 @@
  * Stroubles Creek Web Tour
  * Page component JavaScript source code
  *
- * Author: Katrina Kosmides, Matt Zambetti
+ * Author: Katrina Kosmides, Matt Zambetti, Camille Blaine, Jacob Neigh
  * Version: 1.0
  */
 
 import './Page.css';
 import React from "react";
-// page 1 pictures
+// Smithfield lot photos
 import img0 from "./photos/smith.jpg";
 import img1 from "./photos/smithfield1.jpg";
 import img2 from "./photos/smithfield2.jpg";
-// page 2 pictures
+// Grove lane photos
 import img2_2 from "./photos/grove.jpg";
 import img3 from "./photos/grove1.jpg";
 import img4 from "./photos/grove2.jpg";
-// page 3 pictures
-// life sciences
+// Life sciences photos
 import img4_2 from "./photos/life_science.jpg";
 import img5 from "./photos/green_roof.jpg";
 import img6 from "./photos/green_roof2.jpg";
-// page 4 pictures
+// ICTAS photos
 import img6_2 from "./photos/icat.jpg";
 import img7 from "./photos/rain1.jpg";
 import img8 from "./photos/rain2.jpg";
-// page 5 pictures
+// Duckpond photos
 import img8_2 from "./photos/duckpond.jpg";
 import img9 from "./photos/duckpond1.jpg";
 import img10 from "./photos/duckpond2.jpg";
 import img11 from "./photos/duckpond3.jpg";
 import img12 from "./photos/duckpond4.jpg";
-// war memorial pics
+// War Memorial photos
 import img12_2 from "./photos/war.jpg";
 import img13 from "./photos/war_mem1.png";
 import img14 from "./photos/war_mem2.png";
 import img15 from "./photos/war_mem3.jpg";
-// conclusion pics
+// Conclusion photos
 import img16 from "./photos/conclusion2.png";
 import img17 from "./photos/conclusion1.png";
-// old mill
+// Old Mill photos
 import img17_2 from "./photos/mill.jpg";
 import img18 from "./photos/oldblacksburgmill.jpg";
 import img19 from "./photos/oldblacksburgmill2.jpg";
-// page 8
+// Animal photos
 import img20 from "./photos/foxridge.jpg";
 import img21 from  "./photos/page8.jpg";
 import img22 from "./photos/page8_2.JPG";
@@ -56,11 +55,9 @@ class Page extends React.Component {
      * @returns The page component.
      */
      render() {
-
-         // Page number and text to show for that page number
-         let p = this.props.pageNum;
-         let n = this.props.picNum;
-         let moreInfo = this.props.moreInfo;
+         let p = this.props.pageNum; // page number that the user is on
+         let n = this.props.picNum; // picture number on that page
+         let moreInfo = this.props.moreInfo; // a boolean if moreInfo has been clicked
          let text; // text description of location/image or first link
          let text2; // second link if there is one
          let text3; // third link if there is one
@@ -74,17 +71,16 @@ class Page extends React.Component {
          let p5ImgArray = [img9, img10, img11, img12, img8_2]; // array of images for page 5 (Duck Pond)
          let p6ImgArray = [img13, img14, img15, img12_2]; // array of images for page 6 (War Memorial Gym)
          let p7ImgArray = [img18, img19, img17_2]; // array of images for page 7 (Old Mill)
-         let p8ImgArray = [img21, img22, img23, img20]; // array of images for page 8
-         let p9ImgArray = [img16, img17]; // array of images for page 9
+         let p8ImgArray = [img21, img22, img23, img20]; // array of images for page 8 (Trail camera)
+         let p9ImgArray = [img16, img17]; // array of images for conclusion page
          let imgFBtn; // button to control moving to the next image
          let imgBBtn; // button to control moving to the previous image
 
          // Determines which page the user is on, then sets text accordingly
-
          if (p === 1) {
              if (moreInfo) {
                  // External links for more information
-                 text = <a href="https://reports.aashe.org/institutions/virginia-tech-va/report/2013-03-19/OP/water/OP-23/"> STARS: A Program of AASHE</a>
+                 text = <a href="https://reports.aashe.org/institutions/virginia-tech-va/report/2013-03-19/OP/water/OP-23/" target="_blank" rel="noreferrer noopener"> STARS: A Program of AASHE</a>
              }
              else {
                  // Photo and location description
@@ -95,16 +91,13 @@ class Page extends React.Component {
                      back into the storm water system. The final part to the Smithfield lot is the extended detention. The extended detetion 
                      gradually release water to increase settling polluntants and protect downstream channels. 
                      </p>
-
                  // Forward and back buttons for images and sets image
                  imgAmt = 3;
                  if (n < imgAmt) {
                      imgFBtn = <button type="button" className="imgFBtn" onClick={this.props.handleImgFBtn}>Next Image</button>
-                     console.log(n);
                  }
                  if (n > 1) {
                      imgBBtn = <button type="button" className="imgBBtn" onClick={this.props.handleImgBBtn}>Previous Image</button>
-                     console.log(n);
                  }
                  imgSrc = p1ImgArray[n - 1];
              }
@@ -112,7 +105,7 @@ class Page extends React.Component {
          else if (p === 2) {
              if (moreInfo) {
                  // External links for more information
-                 text = <a href="https://www.facilities.vt.edu/content/dam/facilities_vt_edu/stormwater/Virginia%20Tech%202020%20MS4%20Annual%20Report.pdf"> VT MS4 Annual Report</a>
+                 text = <a href="https://www.facilities.vt.edu/content/dam/facilities_vt_edu/stormwater/Virginia%20Tech%202020%20MS4%20Annual%20Report.pdf" target="_blank" rel="noreferrer noopener"> VT MS4 Annual Report</a>
              }
              else {
                  // Photo and location description
@@ -121,7 +114,6 @@ class Page extends React.Component {
                      while the inflow channel collects parking lot runoff into the pond. The renovations helped the pond look better instead 
                      of a muddy mess filled with sediment and debris. 
                  </p>
-
                  // Forward and back buttons for images and sets image
                  imgAmt = 3;
                  if (n < imgAmt) {
@@ -136,15 +128,14 @@ class Page extends React.Component {
          else if (p === 3) {
              if (moreInfo) {
                  // External links for more information
-                 text = <a href="https://www.nps.gov/tps/sustainability/new-technology/green-roofs/define.htm">NPS Green Roof</a>
-                 text2 = <a href="https://vtx.vt.edu/articles/2012/07/070312-caus-greenroof.html"> Green Roof Designs </a>
+                 text = <a href="https://www.nps.gov/tps/sustainability/new-technology/green-roofs/define.htm" target="_blank" rel="noreferrer noopener">NPS Green Roof</a>
+                 text2 = <a href="https://vtx.vt.edu/articles/2012/07/070312-caus-greenroof.html" target="_blank" rel="noreferrer noopener"> Green Roof Designs </a>
              }
              else {
                  // Photo and location description
                  text = <p align="justify">The Life Sciences Green Roof has a planted layers of vegetation to reduce urban stormwater runoff.
                      This environmental design is to support healthy equilibrium between manmade and natural storm drainage systems.
                  </p>
-
                  // Forward and back buttons for images and sets image
                  imgAmt = 3;
                  if (n < imgAmt) {
@@ -159,16 +150,15 @@ class Page extends React.Component {
          else if (p === 4) {
              if (moreInfo) {
                  // External links for more information
-                 text = <a href="https://www.epa.gov/soakuptherain/soak-rain-rain-gardens"> Rain Gardens </a>
-                 text2 = <a href="https://resilientvirginia.org/vsbn_archives/20071026_016_Va_Tech.pdf"> ICTAS II Planning and Building Design</a>
-                 text3 = <a href="https://www.facilities.vt.edu/content/dam/facilities_vt_edu/stormwater/Virginia%20Tech%202020%20MS4%20Annual%20Report.pdf"> VT MS4 Annual Report </a>
+                 text = <a href="https://www.epa.gov/soakuptherain/soak-rain-rain-gardens" target="_blank" rel="noreferrer noopener"> Rain Gardens </a>
+                 text2 = <a href="https://resilientvirginia.org/vsbn_archives/20071026_016_Va_Tech.pdf" target="_blank" rel="noreferrer noopener"> ICTAS II Planning and Building Design</a>
+                 text3 = <a href="https://www.facilities.vt.edu/content/dam/facilities_vt_edu/stormwater/Virginia%20Tech%202020%20MS4%20Annual%20Report.pdf" target="_blank" rel="noreferrer noopener"> VT MS4 Annual Report </a>
              }
              else {
                  // Photo and location description
                  text = <p align="justify">The ICTAS II Rain Garden is a depressed area that collects rain and allows it to soak into the ground.
                      The purpose of this is to reduce runoff from the property and filter out pollutants.
                  </p>
-
                  // Forward and back buttons for images and sets image
                  imgAmt = 3;
                  if (n < imgAmt) {
@@ -180,13 +170,13 @@ class Page extends React.Component {
                  imgSrc = p4ImgArray[n - 1];
              }
          }
-         else if (p == 5) {
+         else if (p === 5) {
              if (moreInfo) {
                  // External links for more information
-                 text = <a href="https://vtechworks.lib.vt.edu/bitstream/handle/10919/49495/VWRRC_sr201048.pdf">Virginia Tech Published Article</a>
-                 text2 = <a href="https://kids.kiddle.co/Stroubles_Creek">Fun Facts of Stroubles Creek for Kids.</a>
-                 text3 = <a href="https://www.archive.vtmag.vt.edu/fall14/duck-pond.html#:~:text=Artificially%20created%20in%20the%20mid,other%20fish%20released%20into%20it">Virginia Tech Archives Article</a>
-                 text4 = <a href="https://www.wsls.com/features/2022/01/13/wintry-cuteness-otters-spotted-playing-on-ice-at-virginia-tech-duck-pond/">News Article Highlighting the Otters</a>
+                 text = <a href="https://vtechworks.lib.vt.edu/bitstream/handle/10919/49495/VWRRC_sr201048.pdf" target="_blank" rel="noreferrer noopener">Virginia Tech Published Article</a>
+                 text2 = <a href="https://kids.kiddle.co/Stroubles_Creek" target="_blank" rel="noreferrer noopener">Fun Facts of Stroubles Creek for Kids.</a>
+                 text3 = <a href="https://www.archive.vtmag.vt.edu/fall14/duck-pond.html#:~:text=Artificially%20created%20in%20the%20mid,other%20fish%20released%20into%20it" target="_blank" rel="noreferrer noopener">Virginia Tech Archives Article</a>
+                 text4 = <a href="https://www.wsls.com/features/2022/01/13/wintry-cuteness-otters-spotted-playing-on-ice-at-virginia-tech-duck-pond/" target="_blank" rel="noreferrer noopener">News Article Highlighting the Otters</a>
              }
              else {
                  // Photo and location description
@@ -201,7 +191,6 @@ class Page extends React.Component {
                      Under the surface Common Carp, Redbreast Sunfish, Mosquito Fish, White Suckers, and Blackbullheads thrive and call the
                      water home. These species even attract anglers who can compete in the College of Natural Resources and Environmental 
                      informal fishing tournament.</p>
-
                  // Forward and back buttons for images and sets image
                  imgAmt = 5;
                  if (n < imgAmt) {
@@ -213,11 +202,11 @@ class Page extends React.Component {
                  imgSrc = p5ImgArray[n - 1];
              }
          }
-         else if (p == 6) {
+         else if (p === 6) {
              if (moreInfo) {
                  // External links for more information
-                 text = <a href="https://create.piktochart.com/output/20516777-scip-infographicfeb2017">Infographic on Stroubles Creek</a>
-                 text2 = <a href="http://www.collegiatetimes.com/news/virginia_tech/sinking-drillfield-rumors-exposed/article_9ec48152-572e-5c05-99b9-c7ee4e391b66.html">News Article on Rumors Partaining to the Creek</a>
+                 text = <a href="https://create.piktochart.com/output/20516777-scip-infographicfeb2017" target="_blank" rel="noreferrer noopener">Infographic on Stroubles Creek</a>
+                 text2 = <a href="http://www.collegiatetimes.com/news/virginia_tech/sinking-drillfield-rumors-exposed/article_9ec48152-572e-5c05-99b9-c7ee4e391b66.html" target="_blank" rel="noreferrer noopener">News Article on Rumors Partaining to the Creek</a>
              }
              else {
                  // Photo and location description
@@ -229,7 +218,6 @@ class Page extends React.Component {
                                            The creek in this section is burried in a three-sided culvert, leaving the bottom of the creek exposed to the
                                            natural earth beneath it. With the creek being burried underneath the drill field it is responsible for most
                                            of the flooding that happens here, but is not making the Drillfield sink which is contrary to many rumors.</p>
-
                  // Forward and back buttons for images and sets image
                  imgAmt = 4;
                  if (n < imgAmt) {
@@ -241,11 +229,11 @@ class Page extends React.Component {
                  imgSrc = p6ImgArray[n - 1];
              }
          }
-         else if (p == 7) {
+         else if (p === 7) {
              if (moreInfo) {
                  // External links for more information
-                 text = <a href="https://www.dhr.virginia.gov/pdf_files/SpecialCollections/MY-059_Survey_Historic_AH_BlacksburgHD_1997_WORSHAM_report.pdf">Survey Report of Historic Blacksburg</a>
-                 text2 = <a href="https://16frogs.org/frogs/millie.html">16 Frogs: Millie</a>
+                 text = <a href="https://www.dhr.virginia.gov/pdf_files/SpecialCollections/MY-059_Survey_Historic_AH_BlacksburgHD_1997_WORSHAM_report.pdf" target="_blank" rel="noreferrer noopener">Survey Report of Historic Blacksburg</a>
+                 text2 = <a href="https://16frogs.org/frogs/millie.html" target="_blank" rel="noreferrer noopener">16 Frogs: Millie</a>
              }
              else {
                  // Photo and location description
@@ -256,7 +244,6 @@ class Page extends React.Component {
                                            the 16 Frogs Tour (see link for more information). 
                                            
                                            Now this location is the Rivermill Bar and Grill.</p>
-
                  // Forward and back buttons for images and sets image
                  imgAmt = 3;
                  if (n < imgAmt) {
@@ -268,10 +255,10 @@ class Page extends React.Component {
                  imgSrc = p7ImgArray[n - 1];
              }
          }
-         else if (p == 8) {
+         else if (p === 8) {
              if (moreInfo) {
                  // External links for more information
-                 text = <a href="https://drive.google.com/drive/folders/1w15-C9s-IocZfT7dqrLAMepWU_QxAntZ">Trail Camera</a>
+                 text = <a href="https://drive.google.com/drive/folders/1w15-C9s-IocZfT7dqrLAMepWU_QxAntZ" target="_blank" rel="noreferrer noopener">Trail Camera</a>
              }
              else {
                  // Photo and location description
@@ -279,39 +266,33 @@ class Page extends React.Component {
                      This sight is known to have plenty of animal traffic that includes small and some large game.
                      Some featured mammal images at this location include otter, muskrat, mink, weasel, deer, bobcat,
                      and beaver. Species of birds similar to the duck pond also reside here.</p>
-
                  // Forward and back buttons for images and sets image
                  imgAmt = 4;
                  if (imgAmt > 1 && n < imgAmt) {
                      imgFBtn = <button type="button" className="imgFBtn" onClick={this.props.handleImgFBtn}>Next Image</button>
                  }
-                 if (imgAmt > 1 && n == imgAmt) {
+                 if (imgAmt > 1 && n === imgAmt) {
                      imgBBtn = <button type="button" className="imgBBtn" onClick={this.props.handleImgBBtn}>Previous Image</button>
                  }
                  imgSrc = p8ImgArray[n - 1];
              }
          }
          else {
-             if (moreInfo) {
-                 // All sources here
-                 text = <a href="">Some links here.</a>
-             }
-             else {
-                 // Photo and location description
-                 text = <p align="justify"> The 12 mile stream has played a key role in the town of Blacksburg, Virginia Tech, and Montgomery County. 
-                 Stroubles Creek has been designated an impaired waterway. It is important for us to continue learning about the creek in order for us to protect it. 
-                 Thank you for taking our tour and learning about Stroubles Creek :) </p>
 
-                 // Forward and back buttons for images and sets image
-                 imgAmt = 2;
-                 if (imgAmt > 1 && n < imgAmt) {
-                     imgFBtn = <button type="button" className="imgFBtn" onClick={this.props.handleImgFBtn}>Next Image</button>
-                 }
-                 if (imgAmt > 1 && n == imgAmt) {
-                     imgBBtn = <button type="button" className="imgBBtn" onClick={this.props.handleImgBBtn}>Previous Image</button>
-                 }
-                 imgSrc = p9ImgArray[n - 1];
+             // Photo and location description
+             text = <p align="justify"> The 12 mile stream has played a key role in the town of Blacksburg, Virginia Tech, and Montgomery County.
+             Stroubles Creek has been designated an impaired waterway. It is important for us to continue learning about the creek in order for us to protect it.
+             Thank you for taking our tour and learning about Stroubles Creek :) </p>
+             // Forward and back buttons for images and sets image
+             imgAmt = 2;
+             if (imgAmt > 1 && n < imgAmt) {
+                 imgFBtn = <button type="button" className="imgFBtn" onClick={this.props.handleImgFBtn}>Next Image</button>
              }
+             if (imgAmt > 1 && n === imgAmt) {
+                 imgBBtn = <button type="button" className="imgBBtn" onClick={this.props.handleImgBBtn}>Previous Image</button>
+             }
+             imgSrc = p9ImgArray[n - 1];
+
          }
 
          // Returns the proper text and image according to the page number that the user is on
@@ -330,7 +311,7 @@ class Page extends React.Component {
              if (p === 9) {
                  return (
                      <div id="infoTemplate">
-                         <img id="infoImg" src={imgSrc}/>
+                         <img id="infoImg" src={imgSrc} alt="Images of Stroubles Creek"/>
                          {imgFBtn}
                          {imgBBtn}
                          {text}
@@ -340,7 +321,7 @@ class Page extends React.Component {
              else {
                  return (
                      <div id="infoTemplate">
-                         <img id="infoImg" src={imgSrc}/>
+                         <img id="infoImg" src={imgSrc} alt="Images of Stroubles Creek"/>
                          {imgFBtn}
                          {imgBBtn}
                          {text}
@@ -348,7 +329,6 @@ class Page extends React.Component {
                      </div>
                  );
              }
-
          }
      }
 }

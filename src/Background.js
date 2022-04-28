@@ -2,7 +2,7 @@
  * Stroubles Creek Web Tour
  * Background component JavaScript source code
  *
- * Author: Katrina Kosmides, Matt Zambetti
+ * Author: Katrina Kosmides, Matt Zambetti, Camille Blaine, Jacob Neigh
  * Version: 1.0
  */
 
@@ -11,20 +11,16 @@ import React from "react";
 
 class Background extends React.Component {
 
-
-
     /*
      * Renders the background.
-     * @returns Three buttons, forward, back, and exit.
      */
      render() {
 
+         // Keeps track of the page number the user is on
          let pageNum = this.props.pageNum;
 
-         // Returns buttons
-
-         // // maybe add an intro page here start with pagenum = -1
-         if (pageNum == 0) {
+         // Introduction page to give instructions on how to use the UI
+         if (pageNum === 0) {
              return (
                <div id="introduction">
                    <div id="background">
@@ -46,7 +42,8 @@ class Background extends React.Component {
                </div>
              );
          }
-         else if (pageNum == 1) {
+         // First page with buttons to move forward or back to instructions
+         else if (pageNum === 1) {
              return(
                  <div id="buttons">
                      <div id="background">
@@ -57,6 +54,7 @@ class Background extends React.Component {
                  </div>
              );
          }
+         // All middle pages have forward and back buttons
          else if (pageNum < 9) {
              return(
                  <div id="buttons">
@@ -68,6 +66,7 @@ class Background extends React.Component {
                  </div>
              );
          }
+         // Last page does not have a forward button
          else {
              return(
                  <div id="buttons">
@@ -78,7 +77,6 @@ class Background extends React.Component {
                  </div>
              );
          }
-
     }
 }
 

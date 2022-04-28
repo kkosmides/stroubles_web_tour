@@ -2,7 +2,7 @@
  * Stroubles Creek Web Tour
  * Background component CSS source code
  *
- * Author: Katrina Kosmides, Matt Zambetti
+ * Author: Katrina Kosmides, Matt Zambetti, Camille Blaine, Jacob Neigh
  * Version: 1.0
  */
 
@@ -30,8 +30,6 @@
     width: 100%;
     height: 100%;
     position: fixed;
-    left: 0px;
-    top: 0px;
     z-index: -1;
 }
 
