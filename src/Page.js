@@ -239,7 +239,7 @@ class Page extends React.Component {
                                            natural earth beneath it. With the creek being burried underneath the drill field it is responsible for most
                                            of the flooding that happens here, but is not making the Drillfield sink which is contrary to many rumors.</p>
                  // Forward and back buttons for images and sets image
-                 imgAmt = 4;
+                 imgAmt = 5;
                  if (n < imgAmt) {
                      imgFBtn = <button type="button" className="imgFBtn" onClick={this.props.handleImgFBtn}>Next Image</button>
                  }
