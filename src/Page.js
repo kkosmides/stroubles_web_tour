@@ -32,6 +32,7 @@ import img11 from "./photos/duckpond3.jpg";
 import img12 from "./photos/duckpond4.jpg";
 // War Memorial photos
 import img12_2 from "./photos/war.jpg";
+import img12_3 from "./photos/drillfield.jpg";
 import img13 from "./photos/war_mem1.png";
 import img14 from "./photos/war_mem2.png";
 import img15 from "./photos/war_mem3.jpg";
@@ -70,7 +71,7 @@ class Page extends React.Component {
          let p3ImgArray = [img5, img6, img4_2]; // array of images for page 3 (Life Sciences)
          let p4ImgArray = [img7, img8, img6_2]; // array of images for page 4 (Rain Garden)
          let p5ImgArray = [img9, img10, img11, img12, img8_2]; // array of images for page 5 (Duck Pond)
-         let p6ImgArray = [img13, img14, img15, img12_2]; // array of images for page 6 (War Memorial Gym)
+         let p6ImgArray = [img13, img14, img15, img12_2, img12_3]; // array of images for page 6 (War Memorial Gym)
          let p7ImgArray = [img18, img19, img17_2]; // array of images for page 7 (Old Mill)
          let p8ImgArray = [img21, img22, img23, img20]; // array of images for page 8 (Trail camera)
          let p9ImgArray = [img16, img17]; // array of images for conclusion page
