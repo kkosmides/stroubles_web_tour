@@ -1,70 +1,10 @@
-# Getting Started with Create React App
+# Abstract
+The Stroubles Creek Web Tour is a web-based application that takes users on an information-rich tour of eight select locations along Stroubles Creek in Blacksburg, Virginia. The creek is approximately 12 miles long and is partially underground, making touring the stream in-person difficult. The Web Tour focuses on increasing accessibility to the place and nature of the creek through an interesting and interactive experience for users. The experience is focused around four Virginia Standards Of Learning (SOLs), which are manifested in: the environment surrounding the creek, history of the creek, wildlife in and around the creek, and the watershed of the creek. Our tour includes the green roof, rain garden, War Memorial Gym, the Blacksburg Mill, the beaver dam, the Duckpond, the Grove detention, and the Smithfield Lot which all highlight at least one of the SOLs each.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The principal HCI challenges addressed in this project concerns the tradeoffs of navigation and narrative; specifically, maintaining overview, theme, and detail information across multiple spatial locations. When looking for data and sources to use for our model, we wanted to balance users intending to use the tour for leisure purposes and users intending to use the tour for educational purposes. The tour was controlled and accessed through an ordered route, beginning in Blacksburg and ending towards Radford, where users could go forward or back at their own pace. At each spatial location, multimedia information is presented in its context (wildlife, runoff, historic development, …). The effectiveness of the tour can be measured by pre-post tests on SOL content (objective effectiveness) and by subjective metrics of enjoyment and engagement. Future work will include subject matter expert review (K-12 teachers, biological systems engineers, etc) and customization of the tour for different age groups.
 
-## Available Scripts
+# React Components
+App: The app component sets up the general layout of the web page by creating a background and defining several functions that are used throughout the project. The backgorund component sets up the instructions that are displayed on the first page and sets up forward and back buttons depending on the page that the project is rendered on. Lastly, the page component determines which location page the project is rendered to then displays the appropriate information for that specific location. The page component also sets up forward and back buttons for the images, so the user can click through several images for each location. Additionally, the page component takes care of displaying additional resourcing and the Virginia SOL that the location focuses on when the user clicks the "More Information" button. 
 
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# Instructions on how to run
+Depending on which IDE you use, running the web tour on a local server could be very easy. WebStorm provides a run button located at the top right corner of the screen that runs the required commands to open the project in a local server. If the IDE does not provide a run button that works with React, the project can be run using the terminal. First, navigate to the folder that the project is in. Build the project by running "npm run build", then start the program by running "npm start". The "npm start" command runs the application at http:localholst:3000. 
